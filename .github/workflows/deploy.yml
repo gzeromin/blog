@@ -32,7 +32,7 @@ jobs:
       - name: 🏗️ Build Next.js project
         run: |
           echo "Building Next.js project..."
-          npm run build
+          NODE_ENV=production npm run build
           echo "Next.js build completed"
 
           # Next.js 빌드 결과 확인
@@ -77,6 +77,14 @@ jobs:
           else
             echo "⚠️ out/ directory not found, using build output"
           fi
+
+          # CSS 파일들이 제대로 있는지 확인
+          echo "Checking CSS files:"
+          find public -name "*.css" -o -name "*.css.map" | head -10
+
+          # 폰트 파일들이 제대로 있는지 확인
+          echo "Checking font files:"
+          find public -name "*.ttf" -o -name "*.woff" -o -name "*.woff2" | head -10
 
           echo "Static files structure:"
           echo "Public files:"
@@ -124,4 +132,4 @@ jobs:
     steps:
       - name: 🚀 Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4 
+        uses: actions/deploy-pages@v4
