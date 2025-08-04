@@ -78,6 +78,14 @@ jobs:
             echo "⚠️ out/ directory not found, using build output"
           fi
 
+          # 폰트 파일들이 public/fonts/에 있는지 확인하고 복사
+          if [ -d "public/fonts" ]; then
+            echo "✅ Fonts directory exists in public/"
+            ls -la public/fonts/
+          else
+            echo "⚠️ Fonts directory not found in public/"
+          fi
+
           # CSS 파일들이 제대로 있는지 확인
           echo "Checking CSS files:"
           find public -name "*.css" -o -name "*.css.map" | head -10

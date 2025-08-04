@@ -27,8 +27,8 @@ const TheHeaderNavbar: React.FC = () => {
       {/* Change View */}
       <ul className="flex gap-5 text-gray-500">
         <li>
-          <Link href={`/blog`} className="transition-colors hover:text-black">
-            <span>Blog</span>
+          <Link href={`/home`} className="transition-colors hover:text-black">
+            <span>Home</span>
           </Link>
         </li>
         <li>
