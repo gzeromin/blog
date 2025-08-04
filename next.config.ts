@@ -5,6 +5,11 @@ const withNextIntl = createNextIntlPlugin('./src/libs/i18n/request.ts')
 
 const nextConfig: NextConfig = {
   /* config options here */
+  output: 'export',
+  trailingSlash: true,
+  images: {
+    unoptimized: true
+  }
 }
 
 export default withNextIntl(nextConfig)
