@@ -4,7 +4,7 @@
 /* 폰트 정의 */
 @font-face {
   font-family: 'SingleDay';
-  src: url('./fonts/SingleDay-Regular.ttf') format('truetype');
+  src: url('/fonts/SingleDay-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -12,7 +12,7 @@
 
 @font-face {
   font-family: 'MoiraiOne';
-  src: url('./fonts/MoiraiOne-Regular.ttf') format('truetype');
+  src: url('/fonts/MoiraiOne-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;

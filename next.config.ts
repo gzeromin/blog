@@ -9,9 +9,7 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   images: {
     unoptimized: true
-  },
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/blog' : '',
-  basePath: process.env.NODE_ENV === 'production' ? '/blog' : ''
+  }
 }
 
 export default withNextIntl(nextConfig)

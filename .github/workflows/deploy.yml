@@ -86,6 +86,14 @@ jobs:
             echo "⚠️ Fonts directory not found in public/"
           fi
 
+          # 폰트 파일이 제대로 복사되었는지 확인
+          if [ -f "public/fonts/SingleDay-Regular.ttf" ] && [ -f "public/fonts/MoiraiOne-Regular.ttf" ]; then
+            echo "✅ All font files are present"
+          else
+            echo "❌ Some font files are missing"
+            ls -la public/fonts/ || echo "Fonts directory not found"
+          fi
+
           # CSS 파일들이 제대로 있는지 확인
           echo "Checking CSS files:"
           find public -name "*.css" -o -name "*.css.map" | head -10
